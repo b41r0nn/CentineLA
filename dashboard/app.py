@@ -881,7 +881,9 @@ def vista_operador(log: pd.DataFrame, proxy: pd.DataFrame, modelo) -> None:
         st.caption(
             "Sin la regla de lluvia seca (aplicada desde el 13-oct-2026), el mismo modelo "
             "acierta 49.2% de sus avisos desde precaución y 85.5% de sus alertas rojas, con "
-            "las mismas horas detectadas: la regla solo quita avisos en horas sin lluvia."
+            "las mismas horas detectadas: la regla solo quita avisos en horas sin lluvia. "
+            "La cédula radicada el 12-oct-2026 cita 71.5% detectadas / 49.7% acertados "
+            "(amarillo) y 86.1% acertadas (rojo): corrida del 03-oct, sin la regla."
         )
 
     # 4. Qué factores pesan más en la alerta
@@ -1192,7 +1194,7 @@ _GUIA_FAQ = [
         "cat": "Datos y modelo",
         "q": "¿Qué tan confiable es?",
         "simple": "En pruebas con datos que el modelo no vio al entrenar, el nivel amarillo detecta cerca de 7 de cada 10 situaciones de riesgo y, cuando se activa el rojo, acierta en más de 8 de cada 10 veces.",
-        "tecnico": "Validación cronológica 80/20 (corte 2025-07-06 16:00; prueba hasta 2026-09-30). Umbral ≥0.30: recall 71.7% · precisión 57.6%. Umbral ≥0.70: recall 55.2% · precisión 86.8%. Incluyen la regla de lluvia seca (sin lluvia en 24 h no hay aviso). Las métricas son frente al proxy hidrológico. Sin la regla, el mismo modelo da 49.2% y 85.5% de precisión con el mismo recall.",
+        "tecnico": "Validación cronológica 80/20 (corte 2025-07-06 16:00; prueba hasta 2026-09-30). Umbral ≥0.30: recall 71.7% · precisión 57.6%. Umbral ≥0.70: recall 55.2% · precisión 86.8%. Incluyen la regla de lluvia seca (sin lluvia en 24 h no hay aviso). Las métricas son frente al proxy hidrológico. Sin la regla, el mismo modelo da 49.2% y 85.5% de precisión con el mismo recall. La cédula radicada el 12-oct-2026 cita 71.5% / 49.7% (amarillo) y 86.1% (rojo): corrida del 03-oct, sin la regla; el modelo es el mismo.",
     },
     {
         "cat": "Datos y modelo",

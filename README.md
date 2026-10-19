@@ -624,7 +624,7 @@ Criterio `proba >= umbral`, el mismo que aplican el semáforo del dashboard y el
 
 **Lectura:** el amarillo avisa en más horas de riesgo (72 %) y algo más de la mitad de sus avisos (58 %) coinciden con una; el rojo detecta menos (55 %) pero 86.8 % de sus avisos coinciden con una hora de riesgo. "Hora de riesgo" = escorrentía estimada por el proxy SCS-CN a 6 h; las métricas se miden contra el proxy, no contra crecientes observadas en campo.
 
-> **Cifras de los documentos de entrega.** La cédula, el documento técnico y la FAQ de defensa usan las cifras vigentes de la tabla de arriba (actualizadas el 14-oct-2026). Versiones anteriores de esos documentos citaban 71.5 % / 49.7 % (amarillo) y 86.1 % (rojo): la corrida del 03-oct-2026, con criterio `>` y sin la regla de lluvia seca. En "Confiabilidad del sistema", el dashboard indica la precisión del mismo modelo sin la regla (49.2 % y 85.5 %).
+> **Cifras de la cédula (radicada el 12-oct-2026).** La cédula y el documento técnico entregados a Territorio INN reportan 71.5 % detectadas / 49.7 % acertados (amarillo) y 86.1 % acertadas (rojo): corrida del 03-oct-2026, criterio `>` y sin la regla de lluvia seca. Las vigentes (tabla de arriba) incluyen la regla; el modelo es el mismo. El dashboard muestra esta aclaración en "Confiabilidad del sistema" y en la FAQ.
 
 ### Regla de lluvia seca
 
@@ -818,7 +818,7 @@ ANCLAS = [
 
 * **Registro de lecturas recientes:** tabla con las últimas 100 filas de `log_gateway_simulado.csv`, la más reciente arriba, con nombres legibles y 2 decimales. La columna "Estado de alerta" muestra Sin alerta / Precaución / Alerta roja, cada una en su color.
 * **Comportamiento histórico de la cuenca:** gráfico dual-axis `P_basin` / `Q_scs_proxy` con marcadores de PRECAUCIÓN (amarillo) y ALERTA (rojo); selector de rango de fechas.
-* **Confiabilidad del sistema:** 4 métricas (recall/precisión para PRECAUCIÓN y ALERTA) calculadas sobre el split de test cronológico con el mismo criterio `proba >= umbral` y la misma regla de lluvia seca del semáforo; fuente `simulate/10_metricas_ternario.py`. No se recalculan en vivo. Debajo, una nota da la precisión del mismo modelo sin la regla (49.2 % y 85.5 %).
+* **Confiabilidad del sistema:** 4 métricas (recall/precisión para PRECAUCIÓN y ALERTA) calculadas sobre el split de test cronológico con el mismo criterio `proba >= umbral` y la misma regla de lluvia seca del semáforo; fuente `simulate/10_metricas_ternario.py`. No se recalculan en vivo. Debajo, una nota da la precisión del mismo modelo sin la regla (49.2 % y 85.5 %) y las cifras que cita la cédula radicada (49.7 % y 86.1 %).
 * **¿Qué factores pesan más en la alerta?:** feature importance con etiquetas legibles; expander "Detalle técnico" con info del modelo.
 * **Consultar un momento específico:** selector de fecha y hora; muestra el estado como pastilla de color (Sin alerta / Precaución / Alerta roja), la probabilidad de riesgo y las features con nombres legibles. Si la fecha no tiene lecturas, lo avisa sin ocultar el simulador.
 * **Simular un escenario de lluvia:** 6 controles de lluvia (última hora y acumulados de 3 a 48 h), 3 presets, botón "Simular" y semáforo de resultado (ver §7.2).
