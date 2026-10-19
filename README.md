@@ -537,8 +537,7 @@ Los tres regresores se guardaban como `rf_6h.joblib` (~61 725 KB), `rf_6h_delta.
 
 ---
 
-### 5.2 RandomForestClassifier — modelo en producción+
-
+### 5.2 RandomForestClassifier — modelo en producción
 
 `simulate/08_clasificador_6h.py` entrena un clasificador binario (`target_6h > p90`). El dashboard (`dashboard/app.py`) y el gateway aplican a esa probabilidad la regla de lluvia seca (ver más abajo) y luego una escala ternaria, ambas definidas en `simulate/reglas_alerta.py`:
 
