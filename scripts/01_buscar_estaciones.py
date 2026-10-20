@@ -3,7 +3,7 @@
 """
 Fase 1, paso 1 — Identificar estaciones IDEAM cercanas a Q. La Honda / Aranjuez.
 
-Corre en tu máquina (el sandbox de Claude no tiene salida a datos.gov.co).
+Corre en tu máquina local (necesita salida a internet hacia datos.gov.co).
 
 Uso:
     pip install sodapy pandas
